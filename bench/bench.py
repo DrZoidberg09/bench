@@ -412,7 +412,7 @@ class BenchSetup(Base):
 		quiet_flag = "" if verbose else "--quiet"
 
 		return self.run(
-			f"{self.bench.python} -m pip install {quiet_flag} wheel", cwd=self.bench.name
+			f"{self.bench.python} -m pip install {quiet_flag} wheel==0.45.1", cwd=self.bench.name
 		)
 
 	def logging(self):
